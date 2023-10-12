@@ -1,0 +1,13 @@
+* A simple FAST detector
+Using Libav, pthread and SDL I was able to implement a simple FAST detector
+that given an arbitrary video it compute the FAST algorithm on every frame,
+showing the result in a window:
+
+- Top right corner: current frame
+- Bottom right corner: current frame with the FAST algorithm applied
+- Top left corner: previous frame
+- Bottom right corner: previous frame with the FAST algorithm applied 
+
+The frame with the FAST algorithm applied have a gray background because
+when it detect a pixel I have calculated the score/color using the sum
+of all the point in the 3 radius circle of the feature point
